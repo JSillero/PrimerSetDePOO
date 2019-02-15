@@ -26,24 +26,24 @@ class Fraccion:
         return (self.numerador/self.denominador)
     
     def multiplicar(self,mul):
-        self.numerador+=mul*self.denominador
+        self.numerador*=mul
         
     def sumar(self, sum):
-        if(self.denomidor==sum.denominador):
+        if(self.denominador==sum.denominador):
             self.numerador+=sum.numerador
         else:
-            sum.numerador=self.denominador
-            self.numerador=sum.denominador
-            self.denominador=sum.denominador
+            sum.numerador*=self.denominador
+            self.numerador*=sum.denominador
+            self.denominador+=sum.denominador
             self.numerador+=sum.numerador
     
     def restar(self, sum):
         if(self.denomidor==sum.denominador):
             self.numerador-=sum.numerador
         else:
-            sum.numerador=self.denominador
-            self.numerador=sum.denominador
-            self.denominador=sum.denominador
+            sum.numerador*=self.denominador
+            self.numerador*=sum.denominador
+            self.denominador-=sum.denominador
             self.numerador-=sum.numerador 
             
     def multiplicarFrac(self, mul):
