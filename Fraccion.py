@@ -8,7 +8,7 @@ los métodos pueden ser invierte, simplifica, multiplica, divide, etc.
 class Fraccion:
     def __init__(self, den, num ):
         self.__numerador=num
-        if num!=1:
+        if num!=0:
             self.denominador=den
         else:
             print("0 no es un denominador valido, se le ha asignado 1")
