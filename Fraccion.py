@@ -7,8 +7,12 @@ los métodos pueden ser invierte, simplifica, multiplica, divide, etc.
 
 class Fraccion:
     def __init__(self, den, num ):
-        self.denominador=den;
-        self.__numerador=num;
+        self.__numerador=num
+        if num!=1:
+            self.denominador=den
+        else:
+            print("0 no es un denominador valido, se le ha asignado 1")
+              self.denominador=1
     
     def str(self):
         return (self.__numerador,"/",self.denominador)
@@ -17,11 +21,12 @@ class Fraccion:
         print("El valor del __numerador es:" ,self.__numerador," y el del denominador: ", self.denominador )
         
     def setValues(self,den,num):
-        if den!=0:
-            print("0 no es un denominador valido, el __numerador se guardará efectivamente  pero el denominador no.")
-        else:
-            self.denominador=den
         self.__numerador=num
+        if num!=1:
+            self.denominador=den
+        else:
+            print("0 no es un denominador valido, se le ha asignado 1")
+              self.denominador=1
     '''
     Devuelve el valor real de la fraccion
     '''
