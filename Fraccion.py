@@ -6,7 +6,7 @@ los métodos pueden ser invierte, simplifica, multiplica, divide, etc.
 '''
 
 class Fraccion:
-    def __init__(self, den, num ):
+    def __init__(self, num, den ):
         self.__numerador=num
         if num!=0:
             self.denominador=den
